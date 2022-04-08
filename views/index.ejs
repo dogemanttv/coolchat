@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="cool.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Chat App</title>
+  <script defer src="socket.io/socket.io.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div id="room-container">
+      <div>Public Room</div>
+      <form>
+      <button onclick="window.location.replace('http://localhost:3000/public');" class="btn btn-primary pull-right" type="button">Join</button>
+      </form>
+    </div>
+  <form class="bottom" id="form" action="/room" method="POST">
+    <div class="input-box">
+      <input class="input-1" name="room" type="text" autocomplete="off">
+    </div>
+    <button class="btn btn-primary pull-right" type="submit">New Room</button>
+  </form>
+    <br>
+    <input id="joinroomtextbox" class="input-1" name="joinroom" type="text"  autocomplete="off">
+  <button onclick="joinroom()" class="btn btn-primary pull-right" type="button">Join Room</button>
+</body>
+</html>
